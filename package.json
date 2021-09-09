@@ -1,0 +1,36 @@
+{
+  "name": "ma-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./src",
+    "lint:fix": "eslint --ext .js --fix  ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaxin007/ma-test-2021.git"
+  },
+  "author": "jaxin007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaxin007/ma-test-2021/issues"
+  },
+  "homepage": "https://github.com/jaxin007/ma-test-2021#readme",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-modules-newline": "0.0.4",
+    "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "eslint-plugin-typescript-sort-keys": "^1.5.0",
+    "husky": "^7.0.2",
+    "nodemon": "^2.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix && npm run lint",
+      "pre-push": "npm audit"
+    }
+  }
+}
