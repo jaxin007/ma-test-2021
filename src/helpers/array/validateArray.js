@@ -4,7 +4,7 @@ const { removeDollarAndReplaceComma } = require('../string/removeDollarAndDot');
  *
  * @param { { item: String, type: String, weight?: Number, quantity?: Number, pricePerKilo?: String, pricePerItem?: String }[] } goodsArr
  */
-const validateAndSortGoods = (goodsArr) => goodsArr.filter((products) => {
+const goodsValidator = (goodsArr) => goodsArr.filter((products) => {
   const isItemString = typeof products.item === 'string';
   const isTypeString = typeof products.type === 'string';
   const isWeightNumber = typeof products.weight === 'number';
@@ -27,5 +27,5 @@ const validateAndSortGoods = (goodsArr) => goodsArr.filter((products) => {
 });
 
 module.exports = {
-  validateAndSortGoods,
+  goodsValidator,
 };

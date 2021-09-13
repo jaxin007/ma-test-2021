@@ -1,5 +1,4 @@
 const { removeDollarAndReplaceComma } = require('../string/removeDollarAndDot');
-const { goodsArray } = require('../../constants/goods');
 
 /**
  *
@@ -57,4 +56,6 @@ const printGoods = (goodsArr) => goodsArr.reduce((acc, { item, pricePerItem, pri
   costOranges: 0,
 });
 
-console.log(printGoods(goodsArray));
+module.exports = {
+  printGoods,
+};
