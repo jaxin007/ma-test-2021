@@ -7,17 +7,15 @@ const { sortAlphabetically } = require('./helpers/array/sortAlphabetically');
 const validatedArray = goodsValidator(goodsArray);
 
 const goodsToPrint = printGoods(validatedArray);
+const sortedByCost = sortByCost([...validatedArray]); // i use spread operator because sort method is mutable
+const sortedByAlphabet = sortAlphabetically([...validatedArray]);
 
 console.log(goodsToPrint);
 console.log('\n');
 
-const sortedByCost = sortByCost(validatedArray);
-
 console.log('SORTED BY COST:');
 console.log(sortedByCost);
 console.log('\n');
-
-const sortedByAlphabet = sortAlphabetically(validatedArray);
 
 console.log('SORTED BY ALPHABET:');
 console.log(sortedByAlphabet);
